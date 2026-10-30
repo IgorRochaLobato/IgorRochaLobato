@@ -36,7 +36,6 @@ desativa tudo, e é aí que está a engenharia:
 - **LGPD desde o desenho.** CPF mascarado na tela, RIPD e parecer de segurança
   versionados junto do código.
 
-PHP sobre IIS com SSO Entra, executor em Python, rede interna.
 
 **Camada de dados e BI.** Modelagem, DAX, RLS, rateio de custo por centro de
 custo, e os servidores MCP que dão a um agente acesso governado a essas bases.
