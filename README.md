@@ -33,8 +33,17 @@ desativa tudo, e é aí que está a engenharia:
 - **elo forte e elo fraco.** A pessoa é ligada a cada sistema por CPF e
   matrícula; quando só o nome bate, o acesso aparece na tela mas **o botão não
   o desativa**. Homônimo nunca é desativado;
+- **seguro por omissão.** Toda rota exige login salvo lista explícita de
+  exceções — é uma allow-list, não uma deny-list. Erro nunca vai para a tela:
+  o detalhe fica no log do servidor. CSP, `X-Frame-Options: DENY`, `no-store`
+  e sessão do lado servidor;
 - **LGPD desde o desenho.** CPF mascarado na tela, RIPD e parecer de segurança
-  versionados junto do código.
+  versionados junto do código — e os achados do parecer referenciados no
+  comentário do código que os atende.
+
+**Python (Flask)** servido por **Waitress** atrás do IIS, com SSO Entra e
+dependências *vendorizadas* — nada é instalado no Python do servidor. Coletores
+e executores em Python, bancos SQLite, rede interna.
 
 
 **Camada de dados e BI.** Modelagem, DAX, RLS, rateio de custo por centro de
