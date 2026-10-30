@@ -21,6 +21,23 @@ sozinho, em janela agendada, todo dia útil.
 (Power BI / Fabric, Smartrics). O trabalho difícil raramente é a API — é
 reconciliar entidades que cada sistema identifica de um jeito diferente.
 
+**Central de Acessos.** Site interno onde a TI procura uma pessoa — por nome,
+matrícula, CPF ou login — e vê **todos os acessos dela numa tela só**: Active
+Directory, Microsoft 365, ERP e BPM. Para quem foi desligado há um botão que
+desativa tudo, e é aí que está a engenharia:
+
+- **quem pede não aprova.** A desativação vira um pedido; outra pessoa da TI
+  decide. Segregação de função no fluxo, não na intenção;
+- **o executor prova o efeito.** Depois de agir, relê cada sistema e registra o
+  que encontrou — ação sem releitura é promessa, não evidência;
+- **elo forte e elo fraco.** A pessoa é ligada a cada sistema por CPF e
+  matrícula; quando só o nome bate, o acesso aparece na tela mas **o botão não
+  o desativa**. Homônimo nunca é desativado;
+- **LGPD desde o desenho.** CPF mascarado na tela, RIPD e parecer de segurança
+  versionados junto do código.
+
+PHP sobre IIS com SSO Entra, executor em Python, rede interna.
+
 **Camada de dados e BI.** Modelagem, DAX, RLS, rateio de custo por centro de
 custo, e os servidores MCP que dão a um agente acesso governado a essas bases.
 
@@ -57,9 +74,9 @@ conta o que faz; o comentário conta por que existe.
 
 ### Números
 
-**364 commits** em **15 projetos** — agentes de atendimento, clientes de API,
-servidores MCP, automação de BI e um terminal embarcado de registro de presença
-em C++.
+**364 commits** em **15 projetos no GitHub**, mais a Central de Acessos —
+agentes de atendimento, clientes de API, servidores MCP, automação de BI e um
+terminal embarcado de registro de presença em C++.
 
 ---
 
